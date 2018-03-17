@@ -1,0 +1,796 @@
+/usr/bin/python3.6 /home/nicomic/Desktop/PIA/Python/serialtake
+/dev/ttyACM0 - ttyACM0
+b'Tmperature is: 34.06 Temperature 2 is: 33.00\r\n'
+34.0 33.0
+b'Temperature is: 34.00 Temperature 2 is: 33.00\r\n'
+34.0 32.94
+b'Temperature is: 33.94 Temperature 2 is: 32.94\r\n'
+33.94 32.88
+b'Temperature is: 33.94 Temperature 2 is: 32.88\r\n'
+33.94 32.88
+b'Temperature is: 33.94 Temperature 2 is: 32.88\r\n'
+33.88 32.81
+b'Temperature is: 33.88 Temperature 2 is: 32.81\r\n'
+33.88 32.75
+b'Temperature is: 33.81 Temperature 2 is: 32.75\r\n'
+33.81 32.63
+b'Temperature is: 33.75 Temperature 2 is: 32.50\r\n'
+33.56 32.5
+b'Temperature is: 33.38 Temperature 2 is: 32.50\r\n'
+33.06 32.5
+b'Temperature is: 32.69 Temperature 2 is: 32.56\r\n'
+32.25 32.69
+b'Temperature is: 31.81 Temperature 2 is: 32.81\r\n'
+31.31 32.88
+b'Temperature is: 30.81 Temperature 2 is: 33.00\r\n'
+30.31 33.13
+b'Temperature is: 29.81 Temperature 2 is: 33.31\r\n'
+29.25 33.44
+b'Temperature is: 28.75 Temperature 2 is: 33.56\r\n'
+28.25 33.69
+b'Temperature is: 27.75 Temperature 2 is: 33.81\r\n'
+27.19 33.94
+b'Temperature is: 26.75 Temperature 2 is: 34.06\r\n'
+26.25 34.25
+b'Temperature is: 25.75 Temperature 2 is: 34.31\r\n'
+25.31 34.5
+b'Temperature is: 24.87 Temperature 2 is: 34.56\r\n'
+24.44 34.69
+b'Temperature is: 24.00 Temperature 2 is: 34.81\r\n'
+23.56 34.94
+b'Temperature is: 23.12 Temperature 2 is: 35.06\r\n'
+22.75 35.19
+b'Temperature is: 22.37 Temperature 2 is: 35.25\r\n'
+22.0 35.38
+b'Temperature is: 21.62 Temperature 2 is: 35.50\r\n'
+21.25 35.63
+b'Temperature is: 20.94 Temperature 2 is: 35.69\r\n'
+20.56 35.81
+b'Temperature is: 20.25 Temperature 2 is: 35.88\r\n'
+19.94 36.0
+b'Temperature is: 19.62 Temperature 2 is: 36.06\r\n'
+19.31 36.13
+b'Temperature is: 19.00 Temperature 2 is: 36.25\r\n'
+18.75 36.31
+b'Temperature is: 18.50 Temperature 2 is: 36.38\r\n'
+18.19 36.5
+b'Temperature is: 17.94 Temperature 2 is: 36.56\r\n'
+17.69 36.63
+b'Temperature is: 17.44 Temperature 2 is: 36.75\r\n'
+17.19 36.81
+b'Temperature is: 16.94 Temperature 2 is: 36.88\r\n'
+16.75 36.94
+b'Temperature is: 16.50 Temperature 2 is: 37.00\r\n'
+16.31 37.06
+b'Temperature is: 16.12 Temperature 2 is: 37.06\r\n'
+15.88 37.13
+b'Temperature is: 15.69 Temperature 2 is: 37.25\r\n'
+15.5 37.25
+b'Temperature is: 15.31 Temperature 2 is: 37.31\r\n'
+15.13 37.38
+b'Temperature is: 15.00 Temperature 2 is: 37.44\r\n'
+14.81 37.5
+b'Temperature is: 14.69 Temperature 2 is: 37.50\r\n'
+14.75 37.44
+b'Temperature is: 15.06 Temperature 2 is: 37.31\r\n'
+15.63 37.19
+b'Temperature is: 16.44 Temperature 2 is: 36.94\r\n'
+17.62 36.75
+b'Temperature is: 19.00 Temperature 2 is: 36.56\r\n'
+20.69 36.31
+b'Temperature is: 22.50 Temperature 2 is: 36.06\r\n'
+24.44 35.88
+b'Temperature is: 26.37 Temperature 2 is: 35.63\r\n'
+28.25 35.44
+b'Temperature is: 30.06 Temperature 2 is: 35.25\r\n'
+31.81 35.06
+b'Temperature is: 33.56 Temperature 2 is: 34.88\r\n'
+35.38 34.69
+b'Temperature is: 37.13 Temperature 2 is: 34.44\r\n'
+38.94 34.31
+b'Temperature is: 40.69 Temperature 2 is: 34.13\r\n'
+42.31 33.94
+b'Temperature is: 43.88 Temperature 2 is: 33.81\r\n'
+45.38 33.63
+b'Temperature is: 46.75 Temperature 2 is: 33.50\r\n'
+47.88 33.31
+b'Temperature is: 49.00 Temperature 2 is: 33.19\r\n'
+49.94 33.06
+b'Temperature is: 50.69 Temperature 2 is: 32.94\r\n'
+51.31 32.81
+b'Temperature is: 51.94 Temperature 2 is: 32.69\r\n'
+52.44 32.63
+b'Temperature is: 52.94 Temperature 2 is: 32.50\r\n'
+53.44 32.38
+b'Temperature is: 53.88 Temperature 2 is: 32.31\r\n'
+54.25 32.19
+b'Temperature is: 54.56 Temperature 2 is: 32.13\r\n'
+54.88 32.06
+b'Temperature is: 55.19 Temperature 2 is: 32.00\r\n'
+55.56 31.94
+b'Temperature is: 55.94 Temperature 2 is: 31.87\r\n'
+56.31 31.81
+b'Temperature is: 56.81 Temperature 2 is: 31.75\r\n'
+57.31 31.69
+b'Temperature is: 57.88 Temperature 2 is: 31.62\r\n'
+58.44 31.56
+b'Temperature is: 59.06 Temperature 2 is: 31.56\r\n'
+59.81 31.56
+b'Temperature is: 60.75 Temperature 2 is: 31.50\r\n'
+61.88 31.44
+b'Temperature is: 63.06 Temperature 2 is: 31.44\r\n'
+64.19 31.37
+b'Temperature is: 65.25 Temperature 2 is: 31.31\r\n'
+66.31 31.31
+b'Temperature is: 67.31 Temperature 2 is: 31.25\r\n'
+68.31 31.25
+b'Temperature is: 69.25 Temperature 2 is: 31.25\r\n'
+70.12 31.19
+b'Temperature is: 71.06 Temperature 2 is: 31.19\r\n'
+71.87 31.19
+b'Temperature is: 72.69 Temperature 2 is: 31.12\r\n'
+73.5 31.12
+b'Temperature is: 74.31 Temperature 2 is: 31.12\r\n'
+75.06 31.12
+b'Temperature is: 75.81 Temperature 2 is: 31.12\r\n'
+76.56 31.12
+b'Temperature is: 77.25 Temperature 2 is: 31.06\r\n'
+78.0 31.06
+b'Temperature is: 78.69 Temperature 2 is: 31.12\r\n'
+79.31 31.12
+b'Temperature is: 80.00 Temperature 2 is: 31.12\r\n'
+80.62 31.12
+b'Temperature is: 81.31 Temperature 2 is: 31.12\r\n'
+81.94 31.12
+b'Temperature is: 82.56 Temperature 2 is: 31.12\r\n'
+83.12 31.12
+b'Temperature is: 83.69 Temperature 2 is: 31.12\r\n'
+84.31 31.12
+b'Temperature is: 84.87 Temperature 2 is: 31.19\r\n'
+85.37 31.19
+b'Temperature is: 85.94 Temperature 2 is: 31.19\r\n'
+86.5 31.25
+b'Temperature is: 86.94 Temperature 2 is: 31.44\r\n'
+87.37 31.69
+b'Temperature is: 87.62 Temperature 2 is: 32.00\r\n'
+87.87 32.31
+b'Temperature is: 87.87 Temperature 2 is: 32.69\r\n'
+87.81 33.06
+b'Temperature is: 87.62 Temperature 2 is: 33.44\r\n'
+87.31 33.81
+b'Temperature is: 86.94 Temperature 2 is: 34.13\r\n'
+86.44 34.5
+b'Temperature is: 85.81 Temperature 2 is: 34.81\r\n'
+85.19 35.13
+b'Temperature is: 84.50 Temperature 2 is: 35.44\r\n'
+83.69 35.75
+b'Temperature is: 82.87 Temperature 2 is: 36.00\r\n'
+82.06 36.31
+b'Temperature is: 81.12 Temperature 2 is: 36.56\r\n'
+80.25 36.88
+b'Temperature is: 79.31 Temperature 2 is: 37.13\r\n'
+78.37 37.38
+b'Temperature is: 77.37 Temperature 2 is: 37.56\r\n'
+76.37 37.81
+b'Temperature is: 75.37 Temperature 2 is: 38.00\r\n'
+74.37 38.19
+b'Temperature is: 73.44 Temperature 2 is: 38.44\r\n'
+72.44 38.63
+b'Temperature is: 71.44 Temperature 2 is: 38.81\r\n'
+70.44 38.94
+b'Temperature is: 69.44 Temperature 2 is: 39.13\r\n'
+68.44 39.25
+b'Temperature is: 67.50 Temperature 2 is: 39.44\r\n'
+66.56 39.56
+b'Temperature is: 65.56 Temperature 2 is: 39.69\r\n'
+64.62 39.81
+b'Temperature is: 63.69 Temperature 2 is: 39.94\r\n'
+62.75 40.0
+b'Temperature is: 61.88 Temperature 2 is: 40.06\r\n'
+60.94 40.19
+b'Temperature is: 60.06 Temperature 2 is: 40.25\r\n'
+59.19 40.31
+b'Temperature is: 58.31 Temperature 2 is: 40.38\r\n'
+57.44 40.5
+b'Temperature is: 56.63 Temperature 2 is: 40.56\r\n'
+55.75 40.63
+b'Temperature is: 55.00 Temperature 2 is: 40.69\r\n'
+54.19 40.75
+b'Temperature is: 53.38 Temperature 2 is: 40.81\r\n'
+52.56 40.88
+b'Temperature is: 51.81 Temperature 2 is: 40.94\r\n'
+51.06 41.0
+b'Temperature is: 50.31 Temperature 2 is: 41.06\r\n'
+49.63 41.13
+b'Temperature is: 48.88 Temperature 2 is: 41.13\r\n'
+48.19 41.19
+b'Temperature is: 47.50 Temperature 2 is: 41.19\r\n'
+46.81 41.25
+b'Temperature is: 46.13 Temperature 2 is: 41.25\r\n'
+45.5 41.25
+b'Temperature is: 44.81 Temperature 2 is: 41.31\r\n'
+44.19 41.31
+b'Temperature is: 43.56 Temperature 2 is: 41.38\r\n'
+43.0 41.44
+b'Temperature is: 42.38 Temperature 2 is: 41.44\r\n'
+41.75 41.44
+b'Temperature is: 41.19 Temperature 2 is: 41.44\r\n'
+40.63 41.5
+b'Temperature is: 40.06 Temperature 2 is: 41.44\r\n'
+39.5 41.44
+b'Temperature is: 38.94 Temperature 2 is: 41.50\r\n'
+38.44 41.44
+b'Temperature is: 37.94 Temperature 2 is: 41.44\r\n'
+37.44 41.44
+b'Temperature is: 36.94 Temperature 2 is: 41.50\r\n'
+36.44 41.5
+b'Temperature is: 35.94 Temperature 2 is: 41.50\r\n'
+35.44 41.5
+b'Temperature is: 35.00 Temperature 2 is: 41.50\r\n'
+34.56 41.5
+b'Temperature is: 34.13 Temperature 2 is: 41.50\r\n'
+33.69 41.5
+b'Temperature is: 33.25 Temperature 2 is: 41.56\r\n'
+32.81 41.56
+b'Temperature is: 32.44 Temperature 2 is: 41.50\r\n'
+32.0 41.5
+b'Temperature is: 31.62 Temperature 2 is: 41.56\r\n'
+31.25 41.5
+b'Temperature is: 30.87 Temperature 2 is: 41.50\r\n'
+30.5 41.5
+b'Temperature is: 30.12 Temperature 2 is: 41.50\r\n'
+29.81 41.44
+b'Temperature is: 29.44 Temperature 2 is: 41.44\r\n'
+29.06 41.44
+b'Temperature is: 28.75 Temperature 2 is: 41.38\r\n'
+28.44 41.38
+b'Temperature is: 28.12 Temperature 2 is: 41.38\r\n'
+27.81 41.31
+b'Temperature is: 27.50 Temperature 2 is: 41.31\r\n'
+27.19 41.31
+b'Temperature is: 26.87 Temperature 2 is: 41.31\r\n'
+26.56 41.31
+b'Temperature is: 26.31 Temperature 2 is: 41.31\r\n'
+26.0 41.25
+b'Temperature is: 25.75 Temperature 2 is: 41.25\r\n'
+25.5 41.19
+b'Temperature is: 25.25 Temperature 2 is: 41.19\r\n'
+25.0 41.19
+b'Temperature is: 24.69 Temperature 2 is: 41.19\r\n'
+24.5 41.19
+b'Temperature is: 24.25 Temperature 2 is: 41.19\r\n'
+24.0 41.13
+b'Temperature is: 23.75 Temperature 2 is: 41.13\r\n'
+23.5 41.13
+b'Temperature is: 23.31 Temperature 2 is: 41.06\r\n'
+23.06 41.06
+b'Temperature is: 22.87 Temperature 2 is: 41.06\r\n'
+22.69 41.0
+b'Temperature is: 22.44 Temperature 2 is: 41.00\r\n'
+22.25 41.0
+b'Temperature is: 22.06 Temperature 2 is: 41.00\r\n'
+21.87 40.94
+b'Temperature is: 21.69 Temperature 2 is: 40.94\r\n'
+21.5 40.88
+b'Temperature is: 21.31 Temperature 2 is: 40.88\r\n'
+21.12 40.88
+b'Temperature is: 20.94 Temperature 2 is: 40.88\r\n'
+20.75 40.81
+b'Temperature is: 20.56 Temperature 2 is: 40.81\r\n'
+20.44 40.75
+b'Temperature is: 20.25 Temperature 2 is: 40.75\r\n'
+20.12 40.75
+b'Temperature is: 19.94 Temperature 2 is: 40.75\r\n'
+19.81 40.69
+b'Temperature is: 19.62 Temperature 2 is: 40.69\r\n'
+19.5 40.75
+b'Temperature is: 19.37 Temperature 2 is: 40.69\r\n'
+19.19 40.69
+b'Temperature is: 19.06 Temperature 2 is: 40.69\r\n'
+18.94 40.63
+b'Temperature is: 18.81 Temperature 2 is: 40.63\r\n'
+18.69 40.63
+b'Temperature is: 18.50 Temperature 2 is: 40.63\r\n'
+18.44 40.63
+b'Temperature is: 18.31 Temperature 2 is: 40.63\r\n'
+18.19 40.63
+b'Temperature is: 18.06 Temperature 2 is: 40.56\r\n'
+17.94 40.56
+b'Temperature is: 17.81 Temperature 2 is: 40.50\r\n'
+17.69 40.5
+b'Temperature is: 17.62 Temperature 2 is: 40.50\r\n'
+17.5 40.5
+b'Temperature is: 17.37 Temperature 2 is: 40.44\r\n'
+17.25 40.5
+b'Temperature is: 17.19 Temperature 2 is: 40.44\r\n'
+17.06 40.44
+b'Temperature is: 16.94 Temperature 2 is: 40.44\r\n'
+16.87 40.44
+b'Temperature is: 16.75 Temperature 2 is: 40.38\r\n'
+16.69 40.38
+b'Temperature is: 16.62 Temperature 2 is: 40.38\r\n'
+16.5 40.38
+b'Temperature is: 16.44 Temperature 2 is: 40.31\r\n'
+16.31 40.31
+b'Temperature is: 16.25 Temperature 2 is: 40.38\r\n'
+16.19 40.38
+b'Temperature is: 16.06 Temperature 2 is: 40.31\r\n'
+16.0 40.31
+b'Temperature is: 15.88 Temperature 2 is: 40.31\r\n'
+15.81 40.31
+b'Temperature is: 15.75 Temperature 2 is: 40.31\r\n'
+15.69 40.31
+b'Temperature is: 15.56 Temperature 2 is: 40.31\r\n'
+15.5 40.31
+b'Temperature is: 15.44 Temperature 2 is: 40.31\r\n'
+15.38 40.31
+b'Temperature is: 15.31 Temperature 2 is: 40.31\r\n'
+15.19 40.31
+b'Temperature is: 15.13 Temperature 2 is: 40.31\r\n'
+15.06 40.25
+b'Temperature is: 15.00 Temperature 2 is: 40.25\r\n'
+14.94 40.25
+b'Temperature is: 14.88 Temperature 2 is: 40.19\r\n'
+14.75 40.19
+b'Temperature is: 14.69 Temperature 2 is: 40.19\r\n'
+14.63 40.19
+b'Temperature is: 14.56 Temperature 2 is: 40.19\r\n'
+14.5 40.19
+b'Temperature is: 14.50 Temperature 2 is: 40.19\r\n'
+14.38 40.19
+b'Temperature is: 14.38 Temperature 2 is: 40.19\r\n'
+14.31 40.19
+b'Temperature is: 14.25 Temperature 2 is: 40.19\r\n'
+14.19 40.19
+b'Temperature is: 14.13 Temperature 2 is: 40.19\r\n'
+14.06 40.13
+b'Temperature is: 14.06 Temperature 2 is: 40.13\r\n'
+14.0 40.13
+b'Temperature is: 13.94 Temperature 2 is: 40.06\r\n'
+13.88 40.06
+b'Temperature is: 13.81 Temperature 2 is: 40.06\r\n'
+15.13 40.06
+b'Temperature is: 17.25 Temperature 2 is: 40.06\r\n'
+18.81 40.06
+b'Temperature is: 20.25 Temperature 2 is: 40.06\r\n'
+21.69 40.13
+b'Temperature is: 22.94 Temperature 2 is: 40.13\r\n'
+24.19 40.19
+b'Temperature is: 25.31 Temperature 2 is: 40.19\r\n'
+26.37 40.19
+b'Temperature is: 27.37 Temperature 2 is: 40.19\r\n'
+28.44 40.19
+b'Temperature is: 29.44 Temperature 2 is: 40.19\r\n'
+30.31 40.25
+b'Temperature is: 31.06 Temperature 2 is: 40.25\r\n'
+31.75 40.25
+b'Temperature is: 32.31 Temperature 2 is: 40.25\r\n'
+32.88 40.25
+b'Temperature is: 33.38 Temperature 2 is: 40.25\r\n'
+33.88 40.19
+b'Temperature is: 34.31 Temperature 2 is: 40.19\r\n'
+34.75 40.19
+b'Temperature is: 35.19 Temperature 2 is: 40.25\r\n'
+35.63 40.25
+b'Temperature is: 36.00 Temperature 2 is: 40.25\r\n'
+36.38 40.25
+b'Temperature is: 36.75 Temperature 2 is: 40.25\r\n'
+37.13 40.25
+b'Temperature is: 37.44 Temperature 2 is: 40.31\r\n'
+37.75 40.31
+b'Temperature is: 38.06 Temperature 2 is: 40.31\r\n'
+38.5 40.31
+b'Temperature is: 38.88 Temperature 2 is: 40.31\r\n'
+39.25 40.31
+b'Temperature is: 39.56 Temperature 2 is: 40.31\r\n'
+39.94 40.31
+b'Temperature is: 40.25 Temperature 2 is: 40.31\r\n'
+40.56 40.31
+b'Temperature is: 40.88 Temperature 2 is: 40.31\r\n'
+41.13 40.31
+b'Temperature is: 41.38 Temperature 2 is: 40.31\r\n'
+41.63 40.31
+b'Temperature is: 41.88 Temperature 2 is: 40.31\r\n'
+42.06 40.31
+b'Temperature is: 42.25 Temperature 2 is: 40.31\r\n'
+42.44 40.31
+b'Temperature is: 42.56 Temperature 2 is: 40.25\r\n'
+42.69 40.31
+b'Temperature is: 42.88 Temperature 2 is: 40.38\r\n'
+43.06 40.38
+b'Temperature is: 43.19 Temperature 2 is: 40.44\r\n'
+43.31 40.44
+b'Temperature is: 43.44 Temperature 2 is: 40.50\r\n'
+43.56 40.5
+b'Temperature is: 43.63 Temperature 2 is: 40.56\r\n'
+43.56 40.56
+b'Temperature is: 42.94 Temperature 2 is: 40.56\r\n'
+41.56 40.56
+b'Temperature is: 39.94 Temperature 2 is: 40.56\r\n'
+38.25 40.56
+b'Temperature is: 36.56 Temperature 2 is: 40.56\r\n'
+35.06 40.56
+b'Temperature is: 33.63 Temperature 2 is: 40.50\r\n'
+32.31 40.5
+b'Temperature is: 31.12 Temperature 2 is: 40.50\r\n'
+30.0 40.5
+b'Temperature is: 29.00 Temperature 2 is: 40.50\r\n'
+28.06 40.5
+b'Temperature is: 27.25 Temperature 2 is: 40.50\r\n'
+26.44 40.5
+b'Temperature is: 25.75 Temperature 2 is: 40.50\r\n'
+25.06 40.5
+b'Temperature is: 24.44 Temperature 2 is: 40.50\r\n'
+23.87 40.5
+b'Temperature is: 23.37 Temperature 2 is: 40.50\r\n'
+22.81 40.5
+b'Temperature is: 22.37 Temperature 2 is: 40.50\r\n'
+21.94 40.44
+b'Temperature is: 21.56 Temperature 2 is: 40.44\r\n'
+21.19 40.44
+b'Temperature is: 20.81 Temperature 2 is: 40.44\r\n'
+20.44 40.44
+b'Temperature is: 20.12 Temperature 2 is: 40.38\r\n'
+19.81 40.38
+b'Temperature is: 19.56 Temperature 2 is: 40.38\r\n'
+19.25 40.38
+b'Temperature is: 19.00 Temperature 2 is: 40.38\r\n'
+18.75 40.38
+b'Temperature is: 18.50 Temperature 2 is: 40.38\r\n'
+18.31 40.38
+b'Temperature is: 18.06 Temperature 2 is: 40.38\r\n'
+17.87 40.44
+b'Temperature is: 17.62 Temperature 2 is: 40.38\r\n'
+17.44 40.44
+b'Temperature is: 17.25 Temperature 2 is: 40.44\r\n'
+17.06 40.38
+b'Temperature is: 16.94 Temperature 2 is: 40.38\r\n'
+16.75 40.38
+b'Temperature is: 16.62 Temperature 2 is: 40.38\r\n'
+16.44 40.38
+b'Temperature is: 16.31 Temperature 2 is: 40.38\r\n'
+16.12 40.38
+b'Temperature is: 16.00 Temperature 2 is: 40.38\r\n'
+15.88 40.31
+b'Temperature is: 15.75 Temperature 2 is: 40.31\r\n'
+15.63 40.31
+b'Temperature is: 15.50 Temperature 2 is: 40.31\r\n'
+15.38 40.31
+b'Temperature is: 15.25 Temperature 2 is: 40.31\r\n'
+15.13 40.31
+b'Temperature is: 15.00 Temperature 2 is: 40.31\r\n'
+14.94 40.31
+b'Temperature is: 14.81 Temperature 2 is: 40.25\r\n'
+14.69 40.25
+b'Temperature is: 14.63 Temperature 2 is: 40.25\r\n'
+14.5 40.25
+b'Temperature is: 14.44 Temperature 2 is: 40.25\r\n'
+14.31 40.19
+b'Temperature is: 14.25 Temperature 2 is: 40.25\r\n'
+14.19 40.25
+b'Temperature is: 14.06 Temperature 2 is: 40.25\r\n'
+14.0 40.25
+b'Temperature is: 13.94 Temperature 2 is: 40.25\r\n'
+13.88 40.25
+b'Temperature is: 13.75 Temperature 2 is: 40.31\r\n'
+13.69 40.31
+b'Temperature is: 13.63 Temperature 2 is: 40.31\r\n'
+13.56 40.31
+b'Temperature is: 13.50 Temperature 2 is: 40.31\r\n'
+13.44 40.31
+b'Temperature is: 13.38 Temperature 2 is: 40.31\r\n'
+13.31 40.31
+b'Temperature is: 13.25 Temperature 2 is: 40.31\r\n'
+13.19 40.31
+b'Temperature is: 13.13 Temperature 2 is: 40.31\r\n'
+13.06 40.31
+b'Temperature is: 13.00 Temperature 2 is: 40.31\r\n'
+12.94 40.31
+b'Temperature is: 12.94 Temperature 2 is: 40.31\r\n'
+12.88 40.38
+b'Temperature is: 12.81 Temperature 2 is: 40.31\r\n'
+12.75 40.31
+b'Temperature is: 12.69 Temperature 2 is: 40.31\r\n'
+12.63 40.31
+b'Temperature is: 12.63 Temperature 2 is: 40.31\r\n'
+12.56 40.31
+b'Temperature is: 12.50 Temperature 2 is: 40.31\r\n'
+12.5 40.38
+b'Temperature is: 12.44 Temperature 2 is: 40.31\r\n'
+12.38 40.38
+b'Temperature is: 12.31 Temperature 2 is: 40.38\r\n'
+12.31 40.38
+b'Temperature is: 12.25 Temperature 2 is: 40.38\r\n'
+12.19 40.38
+b'Temperature is: 12.13 Temperature 2 is: 40.44\r\n'
+12.13 40.44
+b'Temperature is: 12.06 Temperature 2 is: 40.38\r\n'
+12.06 40.44
+b'Temperature is: 12.00 Temperature 2 is: 40.44\r\n'
+12.0 40.44
+b'Temperature is: 11.94 Temperature 2 is: 40.44\r\n'
+11.94 40.44
+b'Temperature is: 11.88 Temperature 2 is: 40.44\r\n'
+11.88 40.44
+b'Temperature is: 11.81 Temperature 2 is: 40.44\r\n'
+11.81 40.44
+b'Temperature is: 11.81 Temperature 2 is: 40.06\r\n'
+11.75 40.0
+b'Temperature is: 11.75 Temperature 2 is: 40.00\r\n'
+11.69 40.0
+b'Temperature is: 11.69 Temperature 2 is: 40.00\r\n'
+11.63 40.0
+b'Temperature is: 11.56 Temperature 2 is: 40.06\r\n'
+11.56 40.13
+b'Temperature is: 11.50 Temperature 2 is: 40.13\r\n'
+11.5 40.19
+b'Temperature is: 11.44 Temperature 2 is: 39.88\r\n'
+11.44 39.75
+b'Temperature is: 11.38 Temperature 2 is: 39.69\r\n'
+11.38 39.75
+b'Temperature is: 11.31 Temperature 2 is: 39.75\r\n'
+11.31 39.75
+b'Temperature is: 11.25 Temperature 2 is: 39.81\r\n'
+11.25 39.88
+b'Temperature is: 11.19 Temperature 2 is: 39.94\r\n'
+11.19 40.13
+b'Temperature is: 11.13 Temperature 2 is: 40.19\r\n'
+11.13 40.25
+b'Temperature is: 11.06 Temperature 2 is: 40.38\r\n'
+11.06 40.25
+b'Temperature is: 11.00 Temperature 2 is: 40.19\r\n'
+11.0 40.19
+b'Temperature is: 11.00 Temperature 2 is: 40.19\r\n'
+10.94 40.25
+b'Temperature is: 10.94 Temperature 2 is: 40.25\r\n'
+10.94 40.25
+b'Temperature is: 10.94 Temperature 2 is: 40.25\r\n'
+10.94 40.25
+b'Temperature is: 10.94 Temperature 2 is: 40.25\r\n'
+10.94 40.25
+b'Temperature is: 10.94 Temperature 2 is: 40.25\r\n'
+10.88 40.19
+b'Temperature is: 10.88 Temperature 2 is: 40.19\r\n'
+10.88 40.19
+b'Temperature is: 10.88 Temperature 2 is: 40.19\r\n'
+10.88 40.19
+b'Temperature is: 10.81 Temperature 2 is: 40.19\r\n'
+10.81 40.19
+b'Temperature is: 10.81 Temperature 2 is: 40.19\r\n'
+10.81 40.19
+b'Temperature is: 10.81 Temperature 2 is: 40.19\r\n'
+10.81 40.19
+b'Temperature is: 10.81 Temperature 2 is: 40.25\r\n'
+10.75 40.25
+b'Temperature is: 10.75 Temperature 2 is: 40.25\r\n'
+10.75 40.25
+b'Temperature is: 10.75 Temperature 2 is: 40.31\r\n'
+10.69 40.31
+b'Temperature is: 10.69 Temperature 2 is: 40.31\r\n'
+10.69 40.31
+b'Temperature is: 10.63 Temperature 2 is: 40.31\r\n'
+10.63 40.31
+b'Temperature is: 10.63 Temperature 2 is: 40.31\r\n'
+10.63 40.31
+b'Temperature is: 10.63 Temperature 2 is: 40.31\r\n'
+10.63 40.38
+b'Temperature is: 10.63 Temperature 2 is: 40.38\r\n'
+10.56 40.38
+b'Temperature is: 10.56 Temperature 2 is: 40.38\r\n'
+10.56 40.38
+b'Temperature is: 10.56 Temperature 2 is: 40.38\r\n'
+10.56 40.38
+b'Temperature is: 10.56 Temperature 2 is: 40.38\r\n'
+10.5 40.38
+b'Temperature is: 10.50 Temperature 2 is: 40.38\r\n'
+10.5 40.31
+b'Temperature is: 10.50 Temperature 2 is: 40.31\r\n'
+10.5 40.31
+b'Temperature is: 10.44 Temperature 2 is: 40.31\r\n'
+10.44 40.31
+b'Temperature is: 10.44 Temperature 2 is: 40.31\r\n'
+10.44 40.31
+b'Temperature is: 10.44 Temperature 2 is: 40.31\r\n'
+10.38 40.31
+b'Temperature is: 10.38 Temperature 2 is: 40.31\r\n'
+10.38 40.31
+b'Temperature is: 10.38 Temperature 2 is: 40.31\r\n'
+10.38 40.31
+b'Temperature is: 10.31 Temperature 2 is: 40.31\r\n'
+10.31 40.31
+b'Temperature is: 10.31 Temperature 2 is: 40.31\r\n'
+10.25 40.31
+b'Temperature is: 10.25 Temperature 2 is: 40.31\r\n'
+10.25 40.31
+b'Temperature is: 10.25 Temperature 2 is: 40.31\r\n'
+10.19 40.31
+b'Temperature is: 10.19 Temperature 2 is: 40.31\r\n'
+10.19 40.31
+b'Temperature is: 10.19 Temperature 2 is: 40.31\r\n'
+10.19 40.31
+b'Temperature is: 10.13 Temperature 2 is: 40.25\r\n'
+10.13 40.25
+b'Temperature is: 10.13 Temperature 2 is: 40.25\r\n'
+10.13 40.25
+b'Temperature is: 10.13 Temperature 2 is: 40.25\r\n'
+10.13 40.25
+b'Temperature is: 10.13 Temperature 2 is: 40.25\r\n'
+10.13 40.25
+b'Temperature is: 10.13 Temperature 2 is: 40.25\r\n'
+10.13 40.25
+b'Temperature is: 10.13 Temperature 2 is: 40.25\r\n'
+10.13 40.25
+b'Temperature is: 10.13 Temperature 2 is: 40.25\r\n'
+10.13 40.25
+b'Temperature is: 10.13 Temperature 2 is: 40.25\r\n'
+10.13 40.25
+b'Temperature is: 10.06 Temperature 2 is: 40.25\r\n'
+10.06 40.25
+b'Temperature is: 10.06 Temperature 2 is: 40.31\r\n'
+10.06 40.25
+b'Temperature is: 10.06 Temperature 2 is: 40.25\r\n'
+10.06 40.31
+b'Temperature is: 10.06 Temperature 2 is: 40.31\r\n'
+10.06 40.25
+b'Temperature is: 10.06 Temperature 2 is: 40.25\r\n'
+10.0 40.31
+b'Temperature is: 10.00 Temperature 2 is: 40.31\r\n'
+10.0 40.31
+b'Temperature is: 10.00 Temperature 2 is: 40.31\r\n'
+10.0 40.31
+b'Temperature is: 10.00 Temperature 2 is: 40.31\r\n'
+10.0 40.31
+b'Temperature is: 10.00 Temperature 2 is: 40.31\r\n'
+9.94 40.31
+b'Temperature is: 9.94 Temperature 2 is: 40.31\r\n'
+9.94 40.31
+b'Temperature is: 9.94 Temperature 2 is: 40.31\r\n'
+9.94 40.31
+b'Temperature is: 9.94 Temperature 2 is: 40.31\r\n'
+9.94 40.31
+b'Temperature is: 9.94 Temperature 2 is: 40.31\r\n'
+9.94 40.25
+b'Temperature is: 9.88 Temperature 2 is: 40.25\r\n'
+9.88 40.25
+b'Temperature is: 9.88 Temperature 2 is: 40.25\r\n'
+9.88 40.25
+b'Temperature is: 9.88 Temperature 2 is: 40.25\r\n'
+9.88 40.25
+b'Temperature is: 9.88 Temperature 2 is: 40.25\r\n'
+9.88 40.25
+b'Temperature is: 9.88 Temperature 2 is: 40.31\r\n'
+9.88 40.25
+b'Temperature is: 9.88 Temperature 2 is: 40.25\r\n'
+9.88 40.25
+b'Temperature is: 9.88 Temperature 2 is: 40.25\r\n'
+9.88 40.25
+b'Temperature is: 9.88 Temperature 2 is: 40.25\r\n'
+9.88 40.25
+b'Temperature is: 9.88 Temperature 2 is: 40.25\r\n'
+9.88 40.25
+b'Temperature is: 9.88 Temperature 2 is: 40.25\r\n'
+9.88 40.25
+b'Temperature is: 9.88 Temperature 2 is: 40.25\r\n'
+9.88 40.25
+b'Temperature is: 9.88 Temperature 2 is: 40.25\r\n'
+9.88 40.25
+b'Temperature is: 9.81 Temperature 2 is: 40.25\r\n'
+9.81 40.25
+b'Temperature is: 9.81 Temperature 2 is: 40.25\r\n'
+9.81 40.25
+b'Temperature is: 9.81 Temperature 2 is: 40.25\r\n'
+9.81 40.25
+b'Temperature is: 9.81 Temperature 2 is: 40.25\r\n'
+9.81 40.25
+b'Temperature is: 9.81 Temperature 2 is: 40.25\r\n'
+9.81 40.25
+b'Temperature is: 9.81 Temperature 2 is: 40.25\r\n'
+9.81 40.25
+b'Temperature is: 9.75 Temperature 2 is: 40.25\r\n'
+9.75 40.25
+b'Temperature is: 9.75 Temperature 2 is: 40.25\r\n'
+9.75 40.25
+b'Temperature is: 9.75 Temperature 2 is: 40.25\r\n'
+9.75 40.25
+b'Temperature is: 9.75 Temperature 2 is: 40.25\r\n'
+9.75 40.25
+b'Temperature is: 9.75 Temperature 2 is: 40.19\r\n'
+9.75 40.25
+b'Temperature is: 9.75 Temperature 2 is: 40.25\r\n'
+9.75 40.25
+b'Temperature is: 9.75 Temperature 2 is: 40.25\r\n'
+9.75 40.25
+b'Temperature is: 9.75 Temperature 2 is: 40.25\r\n'
+9.75 40.25
+b'Temperature is: 9.75 Temperature 2 is: 40.25\r\n'
+9.75 40.25
+b'Temperature is: 9.75 Temperature 2 is: 40.25\r\n'
+9.75 40.25
+b'Temperature is: 9.75 Temperature 2 is: 40.25\r\n'
+9.75 40.25
+b'Temperature is: 9.75 Temperature 2 is: 40.25\r\n'
+9.75 40.25
+b'Temperature is: 9.75 Temperature 2 is: 40.25\r\n'
+9.75 40.25
+b'Temperature is: 9.75 Temperature 2 is: 40.25\r\n'
+9.75 40.25
+b'Temperature is: 9.75 Temperature 2 is: 40.19\r\n'
+9.75 40.19
+b'Temperature is: 9.75 Temperature 2 is: 40.25\r\n'
+9.75 40.25
+b'Temperature is: 9.75 Temperature 2 is: 40.25\r\n'
+9.75 40.25
+b'Temperature is: 9.69 Temperature 2 is: 40.25\r\n'
+9.75 40.25
+b'Temperature is: 9.69 Temperature 2 is: 40.25\r\n'
+9.69 40.25
+b'Temperature is: 9.69 Temperature 2 is: 40.25\r\n'
+9.69 40.25
+b'Temperature is: 9.69 Temperature 2 is: 40.25\r\n'
+9.69 40.25
+b'Temperature is: 9.63 Temperature 2 is: 40.25\r\n'
+9.63 40.25
+b'Temperature is: 9.63 Temperature 2 is: 40.25\r\n'
+9.63 40.25
+b'Temperature is: 9.63 Temperature 2 is: 40.25\r\n'
+9.63 40.25
+b'Temperature is: 9.63 Temperature 2 is: 40.25\r\n'
+9.63 40.25
+b'Temperature is: 9.63 Temperature 2 is: 40.25\r\n'
+9.63 40.25
+b'Temperature is: 9.69 Temperature 2 is: 40.25\r\n'
+9.69 40.25
+b'Temperature is: 9.63 Temperature 2 is: 40.25\r\n'
+9.69 40.25
+b'Temperature is: 9.69 Temperature 2 is: 40.25\r\n'
+9.69 40.25
+b'Temperature is: 9.69 Temperature 2 is: 40.25\r\n'
+9.69 40.25
+b'Temperature is: 9.69 Temperature 2 is: 40.31\r\n'
+9.69 40.31
+b'Temperature is: 9.69 Temperature 2 is: 40.31\r\n'
+9.69 40.31
+b'Temperature is: 9.69 Temperature 2 is: 40.31\r\n'
+9.69 40.31
+b'Temperature is: 9.69 Temperature 2 is: 40.31\r\n'
+9.63 40.38
+b'Temperature is: 9.63 Temperature 2 is: 40.38\r\n'
+9.63 40.38
+b'Temperature is: 9.63 Temperature 2 is: 40.38\r\n'
+9.63 40.38
+b'Temperature is: 9.63 Temperature 2 is: 40.38\r\n'
+9.63 40.38
+b'Temperature is: 9.63 Temperature 2 is: 40.38\r\n'
+9.63 40.38
+b'Temperature is: 9.63 Temperature 2 is: 40.38\r\n'
+9.63 40.38
+b'Temperature is: 9.63 Temperature 2 is: 40.38\r\n'
+9.63 40.38
+b'Temperature is: 9.63 Temperature 2 is: 40.38\r\n'
+9.63 40.38
+b'Temperature is: 9.63 Temperature 2 is: 40.38\r\n'
+9.63 40.38
+b'Temperature is: 9.63 Temperature 2 is: 40.38\r\n'
+9.63 40.38
+b'Temperature is: 9.63 Temperature 2 is: 40.38\r\n'
+9.69 40.38
+b'Temperature is: 9.69 Temperature 2 is: 40.38\r\n'
+9.69 40.38
+b'Temperature is: 9.69 Temperature 2 is: 40.38\r\n'
+9.69 40.38
+b'Temperature is: 9.75 Temperature 2 is: 40.38\r\n'
+9.75 40.38
+b'Temperature is: 9.75 Temperature 2 is: 40.38\r\n'
+9.75 40.38
+b'Temperature is: 9.75 Temperature 2 is: 40.38\r\n'
+9.75 40.38
+b'Temperature is: 9.75 Temperature 2 is: 40.38\r\n'
+9.75 40.38
+b'Temperature is: 9.75 Temperature 2 is: 40.38\r\n'
+9.81 40.38
+b'Temperature is: 9.81 Temperature 2 is: 40.38\r\n'
+9.81 40.38
+b'Temperature is: 9.81 Temperature 2 is: 40.44\r\n'
+9.88 40.69
+b'Temperature is: 9.88 Temperature 2 is: 40.88\r\n'
+10.0 41.0
