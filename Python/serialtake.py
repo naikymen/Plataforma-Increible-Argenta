@@ -13,6 +13,7 @@ for p in ports:
 #Toma dato del serial
 time.sleep(2)
 ser = serial.Serial('/dev/ttyACM0', 9600)
+print(ser.readline())
 
 #Activa ploteo interactivo
 plt.ion()
