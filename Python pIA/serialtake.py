@@ -10,12 +10,12 @@ ports = list(serial.tools.list_ports.comports())
 for p in ports:
     print(p)
 
-#Toma dato del serial
+# Toma dato del serial
 time.sleep(2)
 ser = serial.Serial('/dev/ttyACM0', 9600)
 print(ser.readline())
 
-#Activa ploteo interactivo
+# Activa ploteo interactivo
 plt.ion()
 plt.axis([0, 100, 0, 100])
 
