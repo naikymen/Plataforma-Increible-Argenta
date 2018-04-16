@@ -76,15 +76,6 @@ void setup()   {
   // Clear the buffer.
   display.clearDisplay();
 
-  // draw a single pixel
-  display.drawPixel(10, 10, WHITE);
-  // Show the display buffer on the hardware.
-  // NOTE: You _must_ call display after making any drawing commands
-  // to make them visible on the display hardware!
-  display.display();
-  delay(300);
-  display.clearDisplay();
-
   // text display tests
   display.setTextSize(1);
   display.setTextColor(WHITE);
@@ -116,7 +107,7 @@ int cycle_wait;
 void loop() {
   infoUpdate(99);
 
-  peltier_status = 0; cycle_wait = 1;
+  peltier_status = 0; cycle_wait = 10;
   peltier(peltier_status, cycle_wait);
 
   peltier_status = 1; cycle_wait = 5;
@@ -148,7 +139,6 @@ int infoUpdate(int temp_target) {
   display.println("Block:     Peltier:");
   display.setTextSize(2);
   display.setTextColor(BLACK, WHITE); // 'inverted' text
-  Serial.println(temperatura);
   display.print(temperatura);
   display.setTextSize(1);
   display.setTextColor(WHITE);
@@ -179,8 +169,8 @@ void cycleWait (int espera, int target_t) {
       display.fillRect(4*22, 8*3, 5*8, 7, 0);
       display.setCursor(4*22,8*3); display.print("TL: "); display.print(espera - a);
       display.display();
-      delay(270);
-      if (target_t == 99) delay(300); // En el futuro debería hacer cosas con tiempos posta...
+      if (target_t != 99) delay(350); // En el futuro debería hacer cosas con tiempos posta...
+      if (target_t == 99) delay(350); // En el futuro debería hacer cosas con tiempos posta...
       a++;
    }
    display.fillRect(4*22, 8*3, 5*8, 7, 0);
@@ -203,8 +193,8 @@ void peltier(int direccion, int tiempo) {
     digitalWrite(4, LOW);
     digitalWrite(6, LOW);
     // Apaga todo y espera la duración del ciclo
-    int nada = 99;
-    cycleWait(tiempo, nada);
+    int target_t = 99;
+    cycleWait(tiempo, target_t);
   }
   if (direccion == 1) {
     // Calentar
@@ -213,9 +203,11 @@ void peltier(int direccion, int tiempo) {
     display.display();
     digitalWrite(4, HIGH);
     digitalWrite(6, LOW);
-    int caliente = 80;
-    while (checktemp() < caliente) {
-      infoUpdate(caliente); delay(270);
+    int target_t = 80;
+    temperatura = checktemp();
+    while (temperatura < target_t) {
+      float temperatura = infoUpdate(target_t);
+      delay(270);
     }
     // Se llama a si misma en modo Nada por la duración del ciclo
     peltier(0, tiempo);
@@ -227,9 +219,11 @@ void peltier(int direccion, int tiempo) {
     display.fillRect(4*24, 8*2, 5*8, 7, 0);
     display.setCursor(4*24,8*2);  display.print("  -+");
     display.display();
-    int frio = 55;
-    while (checktemp() > frio) {
-      infoUpdate(frio); delay(270);
+    int target_t = 55;
+    temperatura = checktemp();
+    while (temperatura > target_t) {
+      float temperatura = infoUpdate(target_t);
+      delay(270);
     }
     // Se llama a si misma en modo Nada por la duración del ciclo
     peltier(0, tiempo);
@@ -242,7 +236,7 @@ void peltier(int direccion, int tiempo) {
     display.setCursor(4*24,8*2);  display.print("  ++");
     display.display();
     // Apaga todo y espera la duración del ciclo
-    int nada = 99;
-    cycleWait(tiempo, nada);
+    int target_t = 99;
+    cycleWait(tiempo, target_t);
   }
 }
