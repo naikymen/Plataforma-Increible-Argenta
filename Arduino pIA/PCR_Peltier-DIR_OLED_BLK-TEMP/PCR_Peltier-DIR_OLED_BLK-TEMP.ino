@@ -103,20 +103,21 @@ float temperatura;
 float temperatura_anterior = checktemp();
 int peltier_status;
 int cycle_wait;
+int target;
 
 void loop() {
   infoUpdate(99);
 
-  peltier_status = 0; cycle_wait = 10;
+  peltier_status = 0; cycle_wait = 3;
   peltier(peltier_status, cycle_wait);
 
-  peltier_status = 1; cycle_wait = 5;
-  peltier(peltier_status, cycle_wait);
+  target = 10; cycle_wait = 5;
+  peltier(target, cycle_wait);
 
-  peltier_status = 2; cycle_wait = 5;
-  peltier(peltier_status, cycle_wait);
+  target = 20; cycle_wait = 5;
+  peltier(target, cycle_wait);
 
-  peltier_status = 3; cycle_wait = 1;
+  peltier_status = 0; cycle_wait = 3;
   peltier(peltier_status, cycle_wait);
 
   display.clearDisplay();
@@ -179,11 +180,19 @@ void cycleWait (int espera, int target_t) {
 }  
 
 
-void peltier(int direccion, int tiempo) {
+void peltier(int t, int tiempo) {
   // 0 -- Nada
   // 1 +- Calentar
   // 2 -+ Enfriar
   // 3 ++ Nada
+
+  int direccion;
+  if (t == 0) direccion = 0; // Nada
+  if (t != 0) {
+    if (t < checktemp()) direccion = 2; // Enfriar
+    if (t > checktemp()) direccion = 1; // Calentar
+  }
+
   
   if (direccion == 0) {
     // Nada
@@ -203,7 +212,7 @@ void peltier(int direccion, int tiempo) {
     display.display();
     digitalWrite(4, HIGH);
     digitalWrite(6, LOW);
-    int target_t = 80;
+    int target_t = t;
     temperatura = checktemp();
     while (temperatura < target_t) {
       float temperatura = infoUpdate(target_t);
@@ -219,7 +228,7 @@ void peltier(int direccion, int tiempo) {
     display.fillRect(4*24, 8*2, 5*8, 7, 0);
     display.setCursor(4*24,8*2);  display.print("  -+");
     display.display();
-    int target_t = 55;
+    int target_t = t;
     temperatura = checktemp();
     while (temperatura > target_t) {
       float temperatura = infoUpdate(target_t);
