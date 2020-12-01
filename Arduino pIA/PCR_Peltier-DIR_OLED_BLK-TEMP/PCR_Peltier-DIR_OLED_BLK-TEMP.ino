@@ -14,24 +14,6 @@ OneWire oneWire(ONE_WIRE_BUS);
 
 DallasTemperature sensors(&oneWire);
 
-/*********************************************************************
-This is an example for our Monochrome OLEDs based on SSD1306 drivers
-
-  Pick one up today in the adafruit shop!
-  ------> http://www.adafruit.com/category/63_98
-
-This example is for a 128x64 size display using SPI to communicate
-4 or 5 pins are required to interface
-
-Adafruit invests time and resources providing this open source code, 
-please support Adafruit and open-source hardware by purchasing 
-products from Adafruit!
-
-Written by Limor Fried/Ladyada  for Adafruit Industries.  
-BSD license, check license.txt for more information
-All text above, and the splash screen must be included in any redistribution
-*********************************************************************/
-
 #include <SPI.h>
 #include <Wire.h>
 /*
@@ -39,10 +21,10 @@ All text above, and the splash screen must be included in any redistribution
 #include <Adafruit_SSD1306.h>
 */
 // If using software SPI (the default case):
-#define OLED_MOSI   9
-#define OLED_CLK   10
+#define OLED_MOSI   9  // SCL
+#define OLED_CLK   10  // SDA
 #define OLED_DC    11
-#define OLED_CS    12
+#define OLED_CS    12  // nada, este display no tiene CS
 #define OLED_RESET 13
 Adafruit_SSD1306 display(OLED_MOSI, OLED_CLK, OLED_DC, OLED_RESET, OLED_CS);
 
@@ -54,6 +36,45 @@ Adafruit_SSD1306 display(OLED_MOSI, OLED_CLK, OLED_DC, OLED_RESET, OLED_CS);
 #endif
 
 
+float temp0;
+float temp1;
+int peltier_status;
+int cycle_wait;
+float target;
+int block = 98;
+
+
+float checktemp(int onewire_index) {
+  sensors.requestTemperatures();
+  //return(roundTemp(sensors.getTempCByIndex(onewire_index)));
+  return(sensors.getTempCByIndex(onewire_index));
+}
+
+float roundTemp(float t){
+  return(round(t*10)/10);
+}
+
+void t_tapa(float temp0) {
+  display.setTextColor(WHITE);
+  display.fillRect(xPos(24), yPos(0), xPos(2), 7, 0);
+  display.setCursor(xPos(24),yPos(0));
+  if (temp0 <= block){digitalWrite(5, HIGH); display.print("+");}
+  if (temp0 > block){digitalWrite(5, LOW); display.print("-");}
+  display.display();
+}
+
+int xPos(int x){
+  return(5*x);
+}
+
+int yPos(int y){
+  return(y*8);
+}
+
+
+float prevTemp1 = checktemp(1);
+
+
 void setup()   {                
   Serial.begin(9600);
   sensors.begin();
@@ -62,6 +83,11 @@ void setup()   {
   digitalWrite(4, LOW);  // Set Pin to LOW to turn Relay OFF
   pinMode(6, OUTPUT);  // OUTPUT significa 5V
   digitalWrite(6, LOW);  // Set Pin to LOW to turn Relay OFF
+
+  pinMode(3, OUTPUT);
+  digitalWrite(3, LOW);  // Set Pin to LOW to turn off lid heating
+  pinMode(5, OUTPUT);  // OUTPUT significa 5V
+  digitalWrite(5, LOW);  // Set Pin to LOW to turn fans off
   
   // by default, we'll generate the high voltage from the 3.3v line internally! (neat!)
   display.begin(SSD1306_SWITCHCAPVCC);
@@ -97,85 +123,113 @@ void setup()   {
   delay(100); 
   display.clearDisplay();
   delay(100);
+
+  display.display();
+
+  
+  temp0 = checktemp(0);
+  temp1 = checktemp(1);
+  infoUpdate(target, temp0, temp1);
+
+  display.setCursor(xPos(16),yPos(0));  display.print(block); display.print(" C");
+  display.display();
+  
+  while(temp0 < block){
+    t_tapa(temp0);
+    delay(500);
+    temp0 = checktemp(0);
+
+    display.setTextColor(BLACK, WHITE); // 'inverted' text
+    display.fillRect(xPos(5), yPos(0), xPos(8), 7, 0);
+    display.setCursor(xPos(5),yPos(0));  display.print(temp0);
+    display.display();
+  }
+  display.setTextColor(WHITE);
 }
 
-float temperatura;
-float temperatura_anterior = checktemp();
-int peltier_status;
-int cycle_wait;
-int target;
+
 
 void loop() {
-  infoUpdate(99);
 
-  peltier_status = 0; cycle_wait = 3;
-  peltier(peltier_status, cycle_wait);
-
-  target = 10; cycle_wait = 5;
+  // La peltier va a desconectarse si le paso un 0 a la temperatura
+  target = 0; cycle_wait = 3;
   peltier(target, cycle_wait);
 
-  target = 20; cycle_wait = 5;
+  target = 90; cycle_wait = 5;
   peltier(target, cycle_wait);
 
-  peltier_status = 0; cycle_wait = 3;
-  peltier(peltier_status, cycle_wait);
+  target = 55; cycle_wait = 5;
+  peltier(target, cycle_wait);
+
+  //target = 72; cycle_wait = 5;
+  //peltier(target, cycle_wait);
+
+  //target = 90; cycle_wait = 5;
+  //peltier(target, cycle_wait);
+
+  //peltier_status = 0; cycle_wait = 3;
+  //peltier(peltier_status, cycle_wait);
 
   display.clearDisplay();
 }
 
 
-float checktemp() {
-  sensors.requestTemperatures();
-  return(sensors.getTempCByIndex(0));
-}
-
-
-int infoUpdate(int temp_target) {
-  temperatura = checktemp();
-  
+float infoUpdate(int target, float temp0, float temp1) {
+    
   // Dibujar la info
   display.setTextSize(1);
   display.setTextColor(WHITE);
   display.setCursor(0,0);
-  display.println("Block:     Peltier:");
-  display.setTextSize(2);
+  display.fillRect(xPos(0), yPos(0), xPos(24), 16, 0);
+  display.println("LID:       ->");
+  display.println("BLK:       ->");
+  display.setCursor(xPos(16),yPos(0));  display.print(block); display.print(" C");
+  display.setCursor(xPos(16),yPos(1));  display.print(target); display.print(" C");
+
+  display.setCursor(xPos(5),yPos(0));
   display.setTextColor(BLACK, WHITE); // 'inverted' text
-  display.print(temperatura);
-  display.setTextSize(1);
+  display.print(temp0);  // tapa LID
+  display.setCursor(xPos(5),yPos(1));
+  display.println(temp1);  // bloque BLK
+
   display.setTextColor(WHITE);
-  display.print(" Tgt: ");
-  display.fillRect(4*24, 8*1, 5*8, 7, 0);
-  display.print(temp_target);
-  display.println(" C");
-  display.println("           Stat:");
-  display.setTextSize(1);
-  display.setTextColor(WHITE);
+  display.print("Log: ");
+  if(temp1 < 0){display.print("error detected");}
+
+  
+  display.setCursor(xPos(0),yPos(3));
   display.print("dT/dt: ");
-  display.fillRect(4*10, 8*3, 5*8, 7, 0);
-  display.println(temperatura - temperatura_anterior);
-  //Serial.println(temperatura - temperatura_anterior);
+  display.fillRect(xPos(7), yPos(3), xPos(10), 7, 0);
+  display.print(temp1 - prevTemp1);
+  
+  //Serial.println(temp0 - prevTemp1);
   display.display();
   //display.clearDisplay();
 
-  temperatura_anterior = temperatura;
-
-  return temperatura;
+  prevTemp1 = temp1;
 }
 
 
 void cycleWait (int espera, int target_t) {
    int a = 0;
    while( a < espera ) {
-      infoUpdate(target_t);
-      display.fillRect(4*22, 8*3, 5*8, 7, 0);
-      display.setCursor(4*22,8*3); display.print("TL: "); display.print(espera - a);
+      temp0 = checktemp(0);
+      temp1 = checktemp(1);
+
+      t_tapa(temp0);
+      infoUpdate(target_t, temp0, temp1);
+      
+      display.fillRect(xPos(19), yPos(3), xPos(8), 7, 0);
+      display.setCursor(xPos(19),yPos(3)); display.print("TL: "); display.print(espera - a);
       display.display();
-      if (target_t != 99) delay(350); // En el futuro debería hacer cosas con tiempos posta...
-      if (target_t == 99) delay(350); // En el futuro debería hacer cosas con tiempos posta...
+
+      delay(500);
+      
       a++;
    }
-   display.fillRect(4*22, 8*3, 5*8, 7, 0);
-   display.setCursor(4*22,8*3); display.print("TL: "); display.print("-");
+   
+   display.fillRect(xPos(19), yPos(3), xPos(10), 7, 0);
+   display.setCursor(xPos(19),yPos(3)); display.print("TL: "); display.print("-");
    display.display();
 }  
 
@@ -184,68 +238,76 @@ void peltier(int t, int tiempo) {
   // 0 -- Nada
   // 1 +- Calentar
   // 2 -+ Enfriar
-  // 3 ++ Nada
+
+  temp0 = checktemp(0);  // LID
+  temp1 = checktemp(1);  // BLK
+  
 
   int direccion;
-  if (t == 0) direccion = 0; // Nada
+  if (t == 0) {direccion = 0;} // Nada
   if (t != 0) {
-    if (t < checktemp()) direccion = 2; // Enfriar
-    if (t > checktemp()) direccion = 1; // Calentar
+    if (t < temp1) {direccion = 2;}; // Enfriar
+    if (t > temp1) {direccion = 1;} // Calentar
   }
+
+  display.fillRect(xPos(16),yPos(0), xPos(8), 16, 0);
+
+  
+  digitalWrite(4, LOW);
+  digitalWrite(6, LOW);
 
   
   if (direccion == 0) {
     // Nada
-    display.fillRect(4*24, 8*2, 5*8, 7, 0);
-    display.setCursor(4*24,8*2);  display.print("  --");
+    display.setCursor(xPos(16),yPos(1));  display.print(t); display.print(" C");
+    display.setCursor(xPos(24),yPos(1));  display.print("i");
     display.display();
-    digitalWrite(4, LOW);
-    digitalWrite(6, LOW);
+    
     // Apaga todo y espera la duración del ciclo
-    int target_t = 99;
-    cycleWait(tiempo, target_t);
+    cycleWait(tiempo, 99);
   }
+
+  
   if (direccion == 1) {
     // Calentar
-    display.fillRect(4*24, 8*2, 5*8, 7, 0);
-    display.setCursor(4*24,8*2);  display.print("  +-");
+    display.fillRect(xPos(24),yPos(1), xPos(1), 16, 0);
+    display.setCursor(xPos(24),yPos(1)); display.print("+");
+    display.setCursor(xPos(16),yPos(1));  display.print(t); display.print(" C");
+    
     display.display();
+    
     digitalWrite(4, HIGH);
     digitalWrite(6, LOW);
-    int target_t = t;
-    temperatura = checktemp();
-    while (temperatura < target_t) {
-      float temperatura = infoUpdate(target_t);
-      delay(270);
+    
+    while (temp1 < t) {
+      temp0 = checktemp(0);
+      temp1 = checktemp(1);
+
+      t_tapa(temp0);
+      infoUpdate(t, temp0, temp1);
     }
     // Se llama a si misma en modo Nada por la duración del ciclo
     peltier(0, tiempo);
   }
+
+  
   if (direccion == 2) {
     // Enfriar
+    display.setCursor(xPos(24),yPos(1)); display.print("-");
+    display.setCursor(xPos(16),yPos(1));  display.print(t); display.print(" C");
+    display.display();
+    
     digitalWrite(4, LOW);
     digitalWrite(6, HIGH);
-    display.fillRect(4*24, 8*2, 5*8, 7, 0);
-    display.setCursor(4*24,8*2);  display.print("  -+");
-    display.display();
-    int target_t = t;
-    temperatura = checktemp();
-    while (temperatura > target_t) {
-      float temperatura = infoUpdate(target_t);
-      delay(270);
+    
+    while (temp1 > t || temp1 < 0) {
+      temp0 = checktemp(0);
+      temp1 = checktemp(1);
+
+      t_tapa(temp0);
+      infoUpdate(t, temp0, temp1);
     }
     // Se llama a si misma en modo Nada por la duración del ciclo
     peltier(0, tiempo);
-  }
-  if (direccion == 3) {
-    // Nada
-    digitalWrite(4, HIGH);
-    digitalWrite(6, HIGH);
-    display.fillRect(4*24, 8*2, 5*8, 7, 0);
-    display.setCursor(4*24,8*2);  display.print("  ++");
-    display.display();
-    // Apaga todo y espera la duración del ciclo
-    int target_t = 99;
-    cycleWait(tiempo, target_t);
   }
 }
